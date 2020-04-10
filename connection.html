@@ -44,35 +44,53 @@
   			<h3 style ="margin : 1rem; text-align: center;">Pas Encore De Compte ?</h3>
   			<div>
   				<div style ="margin : 2rem;">Créez un compte pour profiter de tous les avantages.</div>
-  				<form id="1" hidden>
-  					<div class="form-creation">
-  						<div class="form-group">
-    						<label for="exampleFormControlInput1">Adresse mail UGA</label>
-    						<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="prénom.nom@example.com">
-  						</div>
-  						<div class="form-group">
-    						<label for="identifiant">Identifiant</label>
-    						<input type="text" class="form-control" id="exampleInputEmail1">
-  						</div>
-  						<div class="form-group">
-    						<label for="exampleInputPassword1">Mot de passe</label>
-    						<input type="password" class="form-control" id="exampleInputPassword1">
-  						</div>
-  						<div class="form-group">
-    						<label for="exampleFormControlSelect1">Filière</label>
-    						<select class="form-control" id="exampleFormControlSelect1">
-	      						<option>1</option>
-	      						<option>2</option>
-	      						<option>3</option>
-	      						<option>4</option>
-	      						<option>5</option>
-	    					</select>
-  						</div>
-  					</div>
-  				</form>
   				<button type="submit" class="btn btn-primary" id="createcompte" data-toggle="modal" data-target="#exampleModalLong" style="width: 100%">
 					<span>Cr&eacute;er un compte</span>
 				</button>
+				<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLongTitle">Créer mon compte</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form>
+									<div class="form-creation">
+										<div class="form-group">
+											<label for="exampleFormControlInput1">Adresse mail UGA</label>
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="prénom.nom@example.com">
+										</div>
+										<div class="form-group">
+											<label for="identifiant">Identifiant</label>
+											<input type="text" class="form-control" id="exampleInputEmail1">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1">Mot de passe</label>
+											<input type="password" class="form-control" id="exampleInputPassword1">
+										</div>
+										<div class="form-group">
+											<label for="exampleFormControlSelect1">Filière</label>
+											<select class="form-control" id="exampleFormControlSelect1">
+												<option>1</option>
+												<option>2</option>
+												<option>3</option>
+												<option>4</option>
+												<option>5</option>
+											</select>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+								<button type="submit" class="btn btn-primary">Créer mon compte</button>
+							</div>
+						</div>
+					</div>
+				</div>
   			</div>
 		</div>
 	</div>
