@@ -1,0 +1,168 @@
+<DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Salle ça - Profil</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		.btn-primary{
+			background-color: #fc7b03;
+			border-color: #1f1d1b;
+		}
+	</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Salle Ça !</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExample03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Réservation<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Consultation</a>
+      </li>
+      <li class="nav-item dropdown" >
+        <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Marie_R</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown03">
+          <a class="dropdown-item" href="#">Mon profil</a>
+          <a class="dropdown-item" href="#">Mes réservations</a>
+          <a class="dropdown-item" href="#">Se déconnecter</a>
+        </div>
+      </li>
+    </ul>
+  
+  <button type="button" class="btn btn-outline-secondary">
+  Notifications <span class="badge badge-light">2</span>
+</button>
+</nav>
+
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Gérer mon profil</h1>
+      <p>Vous trouverez ici toutes les informations sur votre profil.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-8">
+        <h2>Informations personnelles</h2>
+        <p>Nom : Rosa</p>
+        <p>Prénom : Marie</p>
+        <p>Composante : UFR LLASIC</p>
+        <p>Niveau : Master 1</p>
+      </div>
+      
+      <div class="col-md-3">
+        <h2>Paramètres</h2>
+        <p><button class="btn btn-link">
+          Créer mon emploi du temps</button> ou <a href="#" class="badge badge-light">l'importer via ADE</a></p>
+          <hr class="my-4">
+        <p>Préférences salles :<br/>
+        <button class="btn btn-link">
+          Ajouter des salles</button></p>
+          <hr class="my-4">
+        <p><a href="#" class="badge badge-danger">Supprimer mon compte</a></p>
+        <hr class="my-4">
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="col-md-10">
+        <h2>Modifier le compte</h2>
+			<div class="container">
+				
+				<div class="row">
+				  <div class="col-md-3">
+					  Adresse mail UGA
+					</div>
+					<div class="col-md-4">  
+					  <fieldset disabled>
+
+						<input type="text" id="disabledTextInput" class="form-control" placeholder="marie.rosa@univ-grenoble-alpes.fr">
+		
+						</fieldset>
+					  
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				
+				<div class="row">
+				  <div class="col-md-3">
+					  Identifiant
+					</div>
+					<div class="col-md-4">  
+					  <input type="text" class="form-control" value = "Marie_R">
+					  
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				
+				<div class="row">
+				  <div class="col-md-3">
+					  <label for="inputPassword6">Ancien mot de passe</label>
+					</div>
+					<div class="col-md-4">  
+					  <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+			<small id="passwordHelpInline" class="text-muted">
+			</small>
+					</div>
+				</div>
+			</div>
+			
+			<div class="container">
+				
+				<div class="row">
+				  <div class="col-md-3">
+					  <label for="inputPassword6">Nouveau mot de passe</label>
+					</div>
+					<div class="col-md-4">  
+					  <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+			<small id="passwordHelpInline" class="text-muted">
+			</small>
+					  
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				
+				<div class="row">
+				  <div class="col-md-3">
+					  <label for="inputPassword6">Confirmer le mot de passe</label>
+					</div>
+					<div class="col-md-4">  
+					  <input type="password" id="inputPassword6" class="form-control mx-sm-3" aria-describedby="passwordHelpInline">
+			<small id="passwordHelpInline" class="text-muted">
+			</small>
+					  
+					</div>
+				</div>
+			</div>
+
+
+		
+        <p><a <button type="button" class="btn btn-outline-secondary">Enregistrer les modifications</button></a></p>
+      </div>
+      </div>
+    </div>
+
+    <hr>
+
+  </div> <!-- /container -->
+
+
+
+<footer class="container">
+  <p>&copy; Balizz 2020-</p>
+</footer>
+</body>
