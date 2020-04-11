@@ -32,22 +32,24 @@
   <div class="collapse navbar-collapse" id="navbarsExample03">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="reservation.html">Réservation<span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Réservation<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="consultation.html">Consultation</a>
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Consultation</a>
       </li>
-      <li class="nav-item dropdown" style="float:right;">
+      <li class="nav-item dropdown" >
         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Marie_R</a>
         <div class="dropdown-menu" aria-labelledby="dropdown03">
-          <a class="dropdown-item" href="compte.html">Mon profil</a>
+          <a class="dropdown-item" href="#">Mon profil</a>
           <a class="dropdown-item" href="#">Mes réservations</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="acc.html">Se déconnecter</a>
+          <a class="dropdown-item" href="#">Se déconnecter</a>
         </div>
       </li>
     </ul>
   </div>
+    <button type="button" class="btn btn-outline-secondary">
+  Notifications <span class="badge badge-light">2</span>
+</button>
 </nav>
 
 	<div class="jumbotron">
@@ -55,205 +57,239 @@
 		<h1 style = "text-align : center;">Réservation</h1>
 		<p class="lead" style = "text-align : center;">Vous trouverez ici toutes les salles disponibles à la réservation.</p>
 	</div>
-	<p class = "card-text">Sélectionnez vos préférences afin de vous proposer les salles les plus adaptées à vos besoins.</p>
-  
- <div class = "form-group">
+<div class = "container">
+		<p class = "card-text">Sélectionnez vos préférences afin de vous proposer les salles les plus adaptées à vos besoins.</p>
+	  
+	 <div class = "form-group">
+		 
+	  <select class="custom-select" >
+		<option>--Bâtiment--</option>
+		<option>Stendhal</option>
+		<option>Bibliothèque des Sciences</option>
+		<option>Bibliothèques de Lettres</option>
+		<option>Simone Veil</option>
+	  </select>
+	  
+	  <select class="custom-select" >
+		<option>--Type de salle--</option>
+		<option>Salle de cours</option>
+		<option>Amphithéâtre</option>
+		<option>Salle de travail de groupe</option>
+		<option>Salle de détente</option>
+	  </select>
+	  
+	  <label>Nombre de personnes</label>
+	  <input type = "number" min = "1" max = "200">
+	  
+
+		<select class="custom-select" >
+		  <option selected>--Equipements--</option>
+		  <option value="1">Ordinateurs</option>
+		  <option value="2">Retro projecteur</option>
+		  <option value="3">Matériel audio visuel</option>
+		  <option value="4">Matériel scientifique</option>
+		</select>
+	  
+	</div> 
+
+
+	  <h2 class="mt-4">Disponibilités</h2>
+	  <p>Sélectionnez les horaires souhaitées.</p>
+	  
+
+		
+	<div class="row" style ="height : 50px;">
+		<div class="col-md-8">
+				<p style="text-align: center; font-size: 20px; font-weight : bold;">HORAIRES</p>
+		</div>
+		
+		<div class="col-md-4">
+		  
+		  <div class="row">
+			  
+				<div class="card bg-light mb-3" style="max-width: 18rem; margin : 70px;">
+					<div class="card-header" style = "text-align : center"><h5 class="card-title">
+
+						<input type="date" id="start" name="trip-start"
+							   value="2020-04-11"
+							   min="2020-01-01" max="2022-12-31"></h5></div>
+					  <div class="card-body">
+						
+						<p class="card-text">Veuillez indiquer le jour où vous souhaitez réserver la salle.</p>
+					</div>
+				</div>
+			</div>
+		  
+		  <div class="row">
+			  
+				<!--Google map-->
+				<div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px; padding : 70px;">
+				  <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+					style="border:0" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+			
+
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+			
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col"><p style = "font-weight : bold;">SALLES</p></div>
+			<div class="col-md-1 themed-grid-col">8h</div>
+			<div class="col-md-1 themed-grid-col">9h</div>
+			<div class="col-md-1 themed-grid-col">10h</div>
+			<div class="col-md-1 themed-grid-col">11h</div>
+			<div class="col-md-1 themed-grid-col">12h</div>
+			<div class="col-md-1 themed-grid-col">13h</div>
+			<div class="col-md-1 themed-grid-col">14h</div>
+			<div class="col-md-1 themed-grid-col">15h</div>
+			<div class="col-md-1 themed-grid-col">16h</div>
+			<div class="col-md-1 themed-grid-col">17h</div>
+		  </div>
+		   <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-2 themed-grid-col">i104</div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+			<div class="col-md-1 themed-grid-col"></div>
+		  </div>
 	 
-  <select class="custom-select" >
-	<option>--Bâtiment--</option>
-	<option>Stendhal</option>
-	<option>Bibliothèque des Sciences</option>
-	<option>Bibliothèques de Lettres</option>
-	<option>Simone Veil</option>
-  </select>
+	  </div>
+	  </div>
+
+
+</div>
+
+
   
-  <select class="custom-select" >
-	<option>--Type de salle--</option>
-	<option>Salle de cours</option>
-	<option>Amphithéâtre</option>
-	<option>Salle de travail de groupe</option>
-	<option>Salle de détente</option>
-  </select>
-  
-  <label>Nombre de personnes</label>
-  <input type = "number" min = "1" max = "200">
-  
+<hr class="my-4">
 
-	<select class="custom-select" >
-	  <option selected>--Equipements--</option>
-	  <option value="1">Ordinateurs</option>
-	  <option value="2">Retro projecteur</option>
-	  <option value="3">Matériel audio visuel</option>
-	  <option value="4">Matériel scientifique</option>
-	</select>
-  
-</div> 
-
-
-  <h2 class="mt-4">Disponibilités</h2>
-  <p>Sélectionnez les horaires souhaitées.</p>
-  
-
-    <div class="col-md-8 themed-grid-col">
-      <div class="pb-3">
-        <p style="text-align: center; font-size: 20px;">HORAIRES</p>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col"><p style = "font-weight : bold;">SALLES</p></div>
-        <div class="col-md-1 themed-grid-col">8h</div>
-        <div class="col-md-1 themed-grid-col">9h</div>
-        <div class="col-md-1 themed-grid-col">10h</div>
-        <div class="col-md-1 themed-grid-col">11h</div>
-        <div class="col-md-1 themed-grid-col">12h</div>
-        <div class="col-md-1 themed-grid-col">13h</div>
-        <div class="col-md-1 themed-grid-col">14h</div>
-        <div class="col-md-1 themed-grid-col">15h</div>
-        <div class="col-md-1 themed-grid-col">16h</div>
-        <div class="col-md-1 themed-grid-col">17h</div>
-      </div>
-       <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 themed-grid-col">i104</div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-        <div class="col-md-1 themed-grid-col"></div>
-      </div>
- 
-  </div>
-  
-
-
-
+<footer class="container">
+  <p>&copy; Balizz 2020-</p>
+</footer>
 </body>
-<script src="js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
-<script src="js/core/popper.min.js" type="text/javascript"></script>
-<script src="js/core/bootstrap.min.js" type="text/javascript"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="js/plugins/bootstrap-switch.js"></script>
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="js/plugins/nouislider.min.js" type="text/javascript"></script>
-<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
-<script src="js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
