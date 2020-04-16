@@ -4,15 +4,6 @@
     <meta charset="UTF-8">
     <title>Salle ça - Se connecter</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    	
-    <script>
-
-    	$(document).ready(function(){
-	    	$("#createcompte").on("click",function(){
-	    		$("#1").show()
-	    	})
-	    })
-    </script>
 </head>
 <body>
 	<div class="jumbotron">
@@ -20,15 +11,21 @@
 	</div>
 	<div class="row">
 		<div class="col" style="padding: 50px; border-right:1px solid">
-			<form>
+			<form method="post" action="authentification.php">
 				<h3 style ="margin : 1rem; text-align: center;">Déjà Un Compte ?</h3>
 		  		<div class="form-group">
 		    		<label for="exampleInputEmail1">Identifiant</label>
-		    		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer votre identifiant">
+		    		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer votre identifiant" name="id" value="<?php
+		    			if(isset($_POST["identifiant"])){
+		    				print $_POST["identifiant"];
+		    			}else{
+		    				print"";
+		    			}
+		    		?>">
 		  		</div>
 		  		<div class="form-group">
 		    		<label for="exampleInputPassword1">Mot de passe</label>
-		    		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Entrer votre mot de passe">
+		    		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Entrer votre mot de passe" name="mdp">
 		  		</div>
 		  		<div style="float: right;">
 		  			<a href="#" id="password-reset" class="password-reset" title="Demander la r&eacute;initialisation de votre mot de passe">Mot de passe oubli&eacute; ?</a>
@@ -37,8 +34,7 @@
 		  			<input type="checkbox" class="input-checkbox" id="login-rememberme" name="login-rememberme" value="true">
 		  			<label for="login-rememberme"><span>Se souvenir de moi</span></label>
 		  		</div>
-				<!--<button type="submit" class="btn btn-primary" style="width: 100%;"  >Me connecter</a></button>-->
-				<a href="reservation.html" class="btn btn-primary" style="width: 100%;">Me connecter</a>
+				<button type="submit" class="btn btn-primary" style="width: 100%;"  >Me connecter</a></button>
 			</form>
 		</div>
 		<div class="col" style="padding: 50px; ">
@@ -58,23 +54,23 @@
 								</button>
 							</div>
 							<div class="modal-body">
-								<form>
+								<form method="post" action="inscription.php">
 									<div class="form-creation">
 										<div class="form-group">
 											<label for="exampleFormControlInput1">Adresse mail UGA</label>
-											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="prénom.nom@example.com">
+											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="prénom.nom@example.com" name="adressemail">
 										</div>
 										<div class="form-group">
 											<label for="identifiant">Identifiant</label>
-											<input type="text" class="form-control" id="exampleInputEmail1">
+											<input type="text" class="form-control" id="exampleInputEmail1" name="id">
 										</div>
 										<div class="form-group">
 											<label for="exampleInputPassword1">Mot de passe</label>
-											<input type="password" class="form-control" id="exampleInputPassword1">
+											<input type="password" class="form-control" id="exampleInputPassword1" name="mdp">
 										</div>
 										<div class="form-group">
 											<label for="exampleFormControlSelect1">Filière</label>
-											<select class="form-control" id="exampleFormControlSelect1">
+											<select class="form-control" id="exampleFormControlSelect1" name="filiere">
 												<option>1</option>
 												<option>2</option>
 												<option>3</option>
@@ -83,12 +79,12 @@
 											</select>
 										</div>
 									</div>
-								</form>
-							</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-								<button type="submit" class="btn btn-primary">Créer mon compte</button>
-							</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+									<button type="submit" class="btn btn-primary">Créer mon compte</button>
+								</div>
+							</form>
 						</div>
 					</div>
 				</div>
