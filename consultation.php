@@ -1,3 +1,22 @@
+<?php 
+header('Content_type:text/html;charset=utf-8');
+$link=@mysqli_connect('localhost','zhangn','107Zhangning','zhangn');
+if(mysqli_connect_errno()){
+    exit(mysqli_connect_error());
+}
+mysqli_set_charset($link,'utf8');
+$query="select * from consultation";
+$result=mysqli_query($link,$query);
+if ($result) {
+    //pour récupérer toutes les informations
+    while($data=mysqli_fetch_array($result,MYSQLI_ASSOC)){
+        //print_r($data);
+    }
+}else{
+    var_dump(mysqli_error($link));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -46,7 +65,6 @@
     				<select class="form-control" id="exampleFormControlSelect1">
 	      				<option>Professeur</option>
 	      				<option>Salle</option>
-	      				<option>...</option>
 	    			</select>
   				</div>
             </div>
@@ -55,12 +73,38 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="form-group">
+                <div class="form-group" id="professeur">
                     <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de professeur : </label>
                     <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Claude Ponton</option>
-                        <option>Agnes Souque</option>
-                        <option>...</option>
+                        <?php 
+                            $query2="select distinct salle_name from consultation";
+                            $result2=mysqli_query($link,$query2);
+                            if ($result2) {
+                                //pour récupérer tous les noms de professeur
+                                while($salle=mysqli_fetch_row($result2)){
+                                    echo "<option>".$salle['0']."</option>";
+                                }
+                            }else{
+                                var_dump(mysqli_error($link));
+                            }
+                        ?>
+                    </select>
+                </div>
+                 <div class="form-group" id="salle" hidden>
+                    <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de salle : </label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <?php
+                            $query1="select distinct user from consultation where profil='Professeur'";
+                            $result1=mysqli_query($link,$query1);
+                            if ($result1) {
+                                //pour récupérer tous les noms de professeur
+                                while($nom=mysqli_fetch_row($result1)){
+                                    echo "<option>".$nom['0']."</option>";
+                                }
+                            }else{
+                                var_dump(mysqli_error($link));
+                            }
+                        ?>
                     </select>
                 </div>
             </div>

@@ -1,19 +1,19 @@
 <?php 
     include_once ('connexion.php');
-    $requete = "SELECT id,mdp FROM users_salleca";
+    $requete = "SELECT name,mdp FROM users_salleca";
     if ($reponse = $bdd -> query($requete)) {
         /* l’exécution a réussie */
         /* traitement de la réponse */
             /* traitement de l’enregistrement $enr */
-            if (isset($_POST["id"]) and isset($_POST["mdp"])) {
+            if (isset($_POST["name"]) and isset($_POST["mdp"])) {
                 $trouve = False;
                 while($enr = $reponse -> fetch() and !$trouve){
                     $i = 1;
-                    if($_POST["id"]== $enr["id"] and $_POST["mdp"]== $enr["mdp"]) {
+                    if($_POST["name"]== $enr["name"] and $_POST["mdp"]== $enr["mdp"]) {
                         $trouve = True;
                         header('Location: http://i3l.univ-grenoble-alpes.fr/~zhangn/salleca/reservation.html');
                         exit();
-                    }elseif($_POST["id"]== $enr["id"] and $_POST["mdp"]!= $enr["mdp"]){
+                    }elseif($_POST["name"]== $enr["name"] and $_POST["mdp"]!= $enr["mdp"]){
                         $i = 2;
                         $trouve = True;
                     }else{
@@ -25,7 +25,7 @@
                 }elseif($trouve and $i == 2){
                     print "Mot de passe incorrect";
                 }else{
-                    print "identifiant <strong>".$_POST["id"]."</strong> inexistant";
+                    print "identifiant <strong>".$_POST["name"]."</strong> inexistant";
                 }
             }else{
                 print "identifiant inexistant";

@@ -15,9 +15,9 @@
 				<h3 style ="margin : 1rem; text-align: center;">Déjà Un Compte ?</h3>
 		  		<div class="form-group">
 		    		<label for="exampleInputEmail1">Identifiant</label>
-		    		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer votre identifiant" name="id" value="<?php
-		    			if(isset($_POST["identifiant"])){
-		    				print $_POST["identifiant"];
+		    		<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entrer votre identifiant" name="name" value="<?php
+		    			if(isset($_POST["name"])){
+		    				print $_POST["name"];
 		    			}else{
 		    				print"";
 		    			}
@@ -57,12 +57,16 @@
 								<form method="post" action="inscription.php">
 									<div class="form-creation">
 										<div class="form-group">
+											<label for="profil">Profil : </label>
+											<input class="form-control" name="profil" value="<?php $profil=@$_GET['profil'];echo $profil;?>" readonly="readonly"></input>
+										</div>
+										<div class="form-group">
 											<label for="exampleFormControlInput1">Adresse mail UGA</label>
 											<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="prénom.nom@example.com" name="adressemail">
 										</div>
 										<div class="form-group">
 											<label for="identifiant">Identifiant</label>
-											<input type="text" class="form-control" id="exampleInputEmail1" name="id">
+											<input type="text" class="form-control" id="exampleInputEmail1" name="name">
 										</div>
 										<div class="form-group">
 											<label for="exampleInputPassword1">Mot de passe</label>
