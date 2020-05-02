@@ -73,8 +73,8 @@ if ($result) {
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="form-group" id="professeur">
-                    <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de professeur : </label>
+                <div class="form-group" id="salle" hidden>
+                    <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de salle : </label>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <?php 
                             $query2="select distinct salle_name from consultation";
@@ -90,8 +90,8 @@ if ($result) {
                         ?>
                     </select>
                 </div>
-                 <div class="form-group" id="salle" hidden>
-                    <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de salle : </label>
+                 <div class="form-group" id="professeur">
+                    <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de professeur : </label>
                     <select class="form-control" id="exampleFormControlSelect1">
                         <?php
                             $query1="select distinct user from consultation where profil='Professeur'";
