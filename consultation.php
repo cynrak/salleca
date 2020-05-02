@@ -70,91 +70,63 @@ if ($result) {
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="form-group" id="salle" hidden>
-                    <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de salle : </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <?php 
-                            $query2="select distinct salle_name from consultation";
-                            $result2=mysqli_query($link,$query2);
-                            if ($result2) {
-                                //pour récupérer tous les noms de professeur
-                                while($salle=mysqli_fetch_row($result2)){
-                                    echo "<option>".$salle['0']."</option>";
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="form-group" id="salle" hidden>
+                        <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de salle : </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <?php
+                                $query2="select distinct salle_name from consultation";
+                                $result2=mysqli_query($link,$query2);
+                                if ($result2) {
+                                    //pour récupérer tous les noms de salle
+                                    while($salle=mysqli_fetch_row($result2)){
+                                        echo "<option>".$salle['0']."</option>";
+                                    }
+                                }else{
+                                    var_dump(mysqli_error($link));
                                 }
-                            }else{
-                                var_dump(mysqli_error($link));
-                            }
-                        ?>
-                    </select>
+                            ?>
+                        </select>
+                    </div>
+                     <div class="form-group" id="professeur">
+                        <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de professeur : </label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <?php
+                                $query1="select distinct user from consultation where profil='Professeur'";
+                                $result1=mysqli_query($link,$query1);
+                                if ($result1) {
+                                    //pour récupérer tous les noms de professeur
+                                    while($nom=mysqli_fetch_row($result1)){
+                                        echo "<option>".$nom['0']."</option>";
+                                    }
+                                }else{
+                                    var_dump(mysqli_error($link));
+                                }
+                            ?>
+                        </select>
+                    </div>
                 </div>
-                 <div class="form-group" id="professeur">
-                    <label for="exampleFormControlSelect1" style="font-size:15px;">Nom de professeur : </label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <?php
-                            $query1="select distinct user from consultation where profil='Professeur'";
-                            $result1=mysqli_query($link,$query1);
-                            if ($result1) {
-                                //pour récupérer tous les noms de professeur
-                                while($nom=mysqli_fetch_row($result1)){
-                                    echo "<option>".$nom['0']."</option>";
-                                }
-                            }else{
-                                var_dump(mysqli_error($link));
-                            }
-                        ?>
-                    </select>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Date : </label>
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col">
-				<div class="form-group">
-					<label>Date : </label>
-					<div class='input-group date' id='datetimepicker1'>
-						<input type='text' class="form-control" />
-						<span class="input-group-addon">
-							<span class="glyphicon glyphicon-calendar"></span>
-						</span>
-					</div>
-				</div>
-			</div>
-    	</div>
-	</div>
-
-	<div style="margin-left:45%;margin-bottom:30px;">
-		<button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Valide</button>
-	</div >
-	<div style="margin-bottom:30px;margin-left:30px;margin-right:30px;" class="collapse multi-collapse" id="multiCollapseExample1">
-		<div class="card card-body">
-			<div class="card-group">
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Claude Ponton</h5>
-						<p class="card-text">Salle occupée : I104<br>
-							Horaire : 10:30 - 12:30<br>
-							Objectif : Cours PHP</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Claude Ponton</h5>
-						<p class="card-text">Salle occupée : I108<br>
-							Horaire : 15:30 - 17:30<br>
-							Objectif : Cours Java</p>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-body">
-						<h5 class="card-title">Claude Ponton</h5>
-						<p class="card-text">Salle occupée : I106<br>
-							Horaire : 8:30 - 10:30<br>
-							Objectif : Cours HTML</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        </div>
+        <div style="margin-left:45%;margin-bottom:30px;">
+            <button class="btn btn-primary" type="submit">Valide</button>
+        </div >
+    </form>
+	
 
 
 </body>
