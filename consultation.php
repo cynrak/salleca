@@ -38,7 +38,7 @@ if ($result) {
         			<a class="nav-link" href="reservation.html">Réservation</a>
       			</li>
       			<li class="nav-item active">
-        			<a class="nav-link" href="consultation.html">Consultation<span class="sr-only">(current)</span></a>
+        			<a class="nav-link" href="consultation.php">Consultation<span class="sr-only">(current)</span></a>
       			</li>
       			<li class="nav-item dropdown">
         			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Marie_R</a>
@@ -46,7 +46,7 @@ if ($result) {
           				<a class="dropdown-item" href="compte.html">Mon profil</a>
           				<a class="dropdown-item" href="#">Mes réservations</a>
           				<div class="dropdown-divider"></div>
-          				<a class="dropdown-item" href="acc.html">Se déconnecter</a>
+          				<a class="dropdown-item" href="index.html">Se déconnecter</a>
         			</div>
       			</li>	
     		</ul>

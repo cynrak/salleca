@@ -26,7 +26,7 @@
         <a class="nav-link" href="reservation.html">Réservation<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="consultation.html">Consultation</a>
+        <a class="nav-link" href="consultation.php">Consultation</a>
       </li>
       <li class="nav-item dropdown active" >
         <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Marie_R</a>
@@ -34,7 +34,7 @@
           <a class="dropdown-item" href="#">Mon profil</a>
           <a class="dropdown-item" href="#">Mes réservations</a>
 			<div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="acc.html">Se déconnecter</a>
+          <a class="dropdown-item" href="index.html">Se déconnecter</a>
         </div>
       </li>
     </ul>
